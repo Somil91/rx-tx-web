@@ -1,0 +1,32 @@
+{
+  "name": "rx-tx-wp",
+  "version": "0.0.0",
+  "description": "Simple Boilerplate for  Rx with Tx",
+  "main": "index.js",
+  "scripts": {
+    "test": "yarn run test ",
+    "start": "webpack --mode development -config=configs/webpack/common.js",
+    "hot": "webpack-dev-server --mode development -config=configs/webpack/common.js --open --hot",
+    "build": "webpack --mode production -config=configs/webpack/common.js"
+  },
+  "keywords": [
+    "react"
+  ],
+  "author": "Somil Kumar",
+  "license": "MIT",
+  "devDependencies": {
+    "awesome-typescript-loader": "^5.2.1",
+    "html-webpack-plugin": "^3.2.0",
+    "typescript": "^3.2.2",
+    "webpack": "^4.28.3",
+    "webpack-cli": "^3.2.1"
+  },
+  "dependencies": {
+    "@types/react": "^16.7.18",
+    "@types/react-dom": "^16.0.11",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "source-map-loader": "^0.2.4",
+    "webpack-dev-server": "^3.1.14"
+  }
+}
