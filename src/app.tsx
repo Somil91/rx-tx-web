@@ -1,7 +1,7 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-
+import { CheckBoxWithLabel } from "./checkBoxWithLabel";
 
 type AppProps = {message : string}
 
@@ -26,8 +26,13 @@ class App extends React.Component<AppProps, AppState> {
             }
         }
         render () {
-            return (
-                <div onClick={this.increment}>{this.props.message} {this.state.count}</div>
+            return ( 
+                <React.Fragment>
+                    <div onClick={this.increment}>{this.props.message} {this.state.count}</div>
+
+                    <CheckBoxWithLabel labelOn="On" labelOff="off"/>
+                </React.Fragment>
+              
             )
     }
 
