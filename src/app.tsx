@@ -5,7 +5,9 @@ import * as ReactDOM from 'react-dom';
 
 type AppProps = {message : string}
 
-
+type AppState  = {
+    count: number
+}
 
 // const App = ({message}) =>   <div>Hello World</div>;
 /** stateless component */
@@ -15,11 +17,8 @@ type AppProps = {message : string}
  * stateful components
  */
 
-class App extends React.Component<{
-    message : string
-    }, {
-        count : number;
-    }> {
+
+class App extends React.Component<AppProps, AppState> {
         constructor(props) {
             super(props);
             this.state = {
