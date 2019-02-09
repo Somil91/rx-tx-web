@@ -1,9 +1,11 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { CheckBoxWithLabel } from "./checkBoxWithLabel";
+// import { CheckBoxWithLabel } from "./checkBoxWithLabel";
 
-type AppProps = {message : string}
+type AppProps = {
+    message : string
+}
 
 type AppState  = {
     count: number
@@ -19,31 +21,35 @@ type AppState  = {
 
 
 class App extends React.Component<AppProps, AppState> {
-        constructor(props) {
-            super(props);
-            this.state = {
-                count: 0
-            }
+
+    constructor(props: AppProps){
+        super(props)
+
+        this.state = {
+            count: 0
         }
-        render () {
-            return ( 
-                <React.Fragment>
-                    <div onClick={this.increment}>{this.props.message} {this.state.count}</div>
-
-                    <CheckBoxWithLabel labelOn="On" labelOff="off"/>
-                </React.Fragment>
-              
-            )
-    }
-
-    increment = () => {
+    };
+    
+    increment = (): void => {
         this.setState({
             count: this.state.count + 1
         });
+    };
+
+    public render() {
+        return ( 
+            <React.Fragment>
+                <div onClick={this.increment}>{this.props.message} {this.state.count}</div>
+                {/* <CheckBoxWithLabel labelOn="On" labelOff="off"/> */}
+            </React.Fragment> 
+            )
     }
+
 }
 
-ReactDOM.render(
-     <App message="hello world with props"/>,
-     document.getElementById('root')
-);
+export default App;
+
+// ReactDOM.render(
+//      <App message="hello world with props"/>,
+//      document.getElementById('root')
+// );

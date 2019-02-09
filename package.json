@@ -4,6 +4,7 @@
     "@types/react-dom": "^16.0.11",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
+    "react-hot-loader": "^4.6.5",
     "ts-loader": "^5.3.3",
     "typescript": "^3.2.2",
     "webpack": "^4.28.4",
@@ -14,6 +15,9 @@
   "version": "1.0.0",
   "main": "index.js",
   "devDependencies": {
+    "@babel/plugin-proposal-class-properties": "^7.3.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.3.2",
+    "@babel/preset-typescript": "^7.1.0",
     "@types/enzyme": "^3.1.15",
     "@types/jest": "^23.3.12",
     "enzyme": "^3.8.0",
@@ -22,8 +26,9 @@
     "ts-jest": "^23.10.5"
   },
   "scripts": {
+    "check-types": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack -p",
+    "build": "webpack --config webpack.config.common.js --watch",
     "start": "webpack-dev-server -d --content-base ./public"
   },
   "repository": {
