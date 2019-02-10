@@ -1,10 +1,10 @@
 // const {resolve} = require('path');
 // const {CheckerPlugin} = require('awesome-typescript-loader');
+require('@babel/polyfill');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-
 module.exports =  {
-    entry: './src/index.tsx',
+    entry:  ['@babel/polyfill', './src/index.tsx'],
     output: {
         path: __dirname + '/public',
         filename: 'app.bundle.js'
@@ -31,5 +31,5 @@ module.exports =  {
       ],
     performance: {
         hints: false,
-      },
+      }
 }

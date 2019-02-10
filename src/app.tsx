@@ -39,6 +39,7 @@ class App extends React.Component<AppProps, AppState> {
     public render() {
         return ( 
             <React.Fragment>
+                <div>Hello 2</div>
                 <div onClick={this.increment}>{this.props.message} {this.state.count}</div>
                 {/* <CheckBoxWithLabel labelOn="On" labelOff="off"/> */}
             </React.Fragment> 
