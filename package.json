@@ -22,12 +22,15 @@
     "@types/jest": "^23.3.12",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
+    "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
-    "ts-jest": "^23.10.5"
+    "ts-jest": "^23.10.5",
+    "webpack-merge": "^4.2.1"
   },
   "scripts": {
     "check-types": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack-dev-server --config=webpack.config.dev.js",
     "build": "webpack --config webpack.config.common.js --watch",
     "start": "webpack-dev-server -d --content-base ./public"
   },
