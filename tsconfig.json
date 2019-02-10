@@ -1,15 +1,18 @@
 {
     "compilerOptions": {
-        "outDir": "./compliedTS/",
         "sourceMap": true,
         "noImplicitAny": false,
         "module": "commonjs",
-        "target": "es5",
+        "target": "esnext",
         "jsx": "react",
         "lib": ["es5", "es6", "dom"],
-
-        // Enable strictest settings like strictNullChecks & noImplicitAny.
+        //custom :
+        "moduleResolution": "node",
+        "allowJs": true,
+        "noEmit":true,
         "strict": true,
+        "isolatedModules": true,
+        "esModuleInterop": true
     },
     "include": [
         "./src/**/*"

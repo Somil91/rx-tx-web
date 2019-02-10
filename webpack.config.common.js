@@ -15,8 +15,15 @@ module.exports =  {
     module: {
         rules : [
             {
-                test: /\.tsx?$/, loader: 'ts-loader' 
-            }
+                test: /\.js$/,
+                use: ["babel-loader","source-map-loader"],
+                exclude: "/node_modules/",
+                enforce: "pre"
+            },
+            {
+                test: /\.tsx?$/, 
+                loader: ["babel-loader"]
+            },
         ]
     },
     plugins: [
