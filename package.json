@@ -30,8 +30,8 @@
   "scripts": {
     "check-types": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "webpack-dev-server --config=webpack.config.dev.js",
-    "build": "webpack --config webpack.config.common.js --watch",
+    "dev:run": "webpack-dev-server --config=webpack.config.dev.js",
+    "dev:build": "webpack --config=webpack.config.dev.js",
     "start": "webpack-dev-server -d --content-base ./public"
   },
   "repository": {
