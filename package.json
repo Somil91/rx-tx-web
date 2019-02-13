@@ -29,14 +29,17 @@
     "@types/react": "^16.7.18",
     "@types/react-dom": "^16.0.11",
     "babel-loader": "^8.0.4",
+    "dynamic-cdn-webpack-plugin": "^4.0.0",
     "enzyme": "^3.8.0",
     "enzyme-adapter-react-16": "^1.7.1",
     "html-webpack-plugin": "^3.2.0",
     "jest": "^23.6.0",
+    "module-to-cdn": "^3.1.2",
     "source-map-loader": "^0.2.4",
     "ts-jest": "^23.10.5",
     "tslint": "^5.12.1",
     "tslint-react": "^3.6.0",
+    "webpack-bundle-analyzer": "^3.0.4",
     "webpack-merge": "^4.2.1"
   },
   "scripts": {

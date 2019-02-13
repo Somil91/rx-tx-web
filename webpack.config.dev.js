@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const commonConfig = require('./webpack.config.common');
 
 module.exports = merge(commonConfig, {
-  mode: 'development',
+  mode: 'production',
   devServer: {
     port: 3001
   },
