@@ -48,6 +48,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev:serve": "webpack-dev-server --config=webpack.config.dev.js",
     "dev:build": "webpack --config=webpack.config.dev.js",
+    "prod:serve": "webpack-dev-server --config=webpack.config.prod.js",
+    "prod:build": "webpack --config=webpack.config.prod.js",
     "start": "webpack-dev-server -d --content-base ./public"
   },
   "repository": {

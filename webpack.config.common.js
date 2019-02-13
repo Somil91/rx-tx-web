@@ -7,7 +7,7 @@ const DynamicCdnWebpackPlugin = require('dynamic-cdn-webpack-plugin');
 
 
 module.exports =  {
-    entry:  ['@babel/polyfill', './src/index.tsx'],
+    entry:  ['./src/index.tsx'], // use 'babel-polyfill' later on so support old browsers.
     // output: {
     //     path: __dirname + '/public',
     //     filename: 'app.bundle.js'
