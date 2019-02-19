@@ -1,12 +1,17 @@
 {
-	"defaultSeverity": "error",
+	"defaultSeverity": "warning",
 	"extends": [
-        "tslint:recommended", 
-        "tslint-react"
+        "tslint:latest", 
+		"tslint-react",
+		"tslint-config-prettier"
 	],
 	"jsRules": {},
-	"rules": {},
-	"rulesDirectory": [],
+	"rules": {
+		"prettier": [true, "./.prettierrc"],
+		"interface-name": false,
+		"member-access": false
+	},
+	"rulesDirectory": ["tslint-plugin-prettier"],
 	"linterOptions": {
 		"exclude": ["**/node_modules/**"]
 	}

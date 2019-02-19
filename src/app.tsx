@@ -3,12 +3,12 @@ import * as ReactDOM from 'react-dom';
 
 // import { CheckBoxWithLabel } from "./checkBoxWithLabel";
 
-type AppProps = {
-    message : string
+interface AppProps {
+  message: string;
 }
 
-type AppState  = {
-    count: number
+interface AppState {
+  count: number;
 }
 
 // const App = ({message}) =>   <div>Hello World</div>;
@@ -19,33 +19,32 @@ type AppState  = {
  * stateful components
  */
 
-
 class App extends React.Component<AppProps, AppState> {
+  constructor(props: AppProps) {
+    super(props);
 
-    constructor(props: AppProps){
-        super(props)
-
-        this.state = {
-            count: 0
-        }
+    this.state = {
+      count: 0,
     };
-    
-    increment = (): void => {
-        this.setState({
-            count: this.state.count + 1
-        });
-    };
+  }
 
-    public render() {
-        return ( 
-            <React.Fragment>
-                <div>Hello 2</div>
-                <div onClick={this.increment}>{this.props.message} {this.state.count}</div>
-                {/* <CheckBoxWithLabel labelOn="On" labelOff="off"/> */}
-            </React.Fragment> 
-            )
-    }
+  increment = (): void => {
+    this.setState({
+      count: this.state.count + 1,
+    });
+  };
 
+  public render() {
+    return (
+      <React.Fragment>
+        <div>Hello 2</div>
+        <div onClick={this.increment}>
+          {this.props.message} {this.state.count}
+        </div>
+        {/* <CheckBoxWithLabel labelOn="On" labelOff="off"/> */}
+      </React.Fragment>
+    );
+  }
 }
 
 export default App;
