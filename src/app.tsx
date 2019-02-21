@@ -1,12 +1,14 @@
 import * as React from 'react';
 import * as ReactDOM from 'react-dom';
 
-import { CheckBoxWithLabel } from "./checkBoxWithLabel";
+// import { CheckBoxWithLabel } from "./checkBoxWithLabel";
 
-type AppProps = {message : string}
+interface AppProps {
+  message: string;
+}
 
-type AppState  = {
-    count: number
+interface AppState {
+  count: number;
 }
 
 // const App = ({message}) =>   <div>Hello World</div>;
@@ -17,33 +19,37 @@ type AppState  = {
  * stateful components
  */
 
-
 class App extends React.Component<AppProps, AppState> {
-        constructor(props) {
-            super(props);
-            this.state = {
-                count: 0
-            }
-        }
-        render () {
-            return ( 
-                <React.Fragment>
-                    <div onClick={this.increment}>{this.props.message} {this.state.count}</div>
+  constructor(props: AppProps) {
+    super(props);
 
-                    <CheckBoxWithLabel labelOn="On" labelOff="off"/>
-                </React.Fragment>
-              
-            )
-    }
+    this.state = {
+      count: 0,
+    };
+  }
 
-    increment = () => {
-        this.setState({
-            count: this.state.count + 1
-        });
-    }
+  increment = (): void => {
+    this.setState({
+      count: this.state.count + 1,
+    });
+  };
+
+  public render() {
+    return (
+      <React.Fragment>
+        <div>Hello 2</div>
+        <div onClick={this.increment}>
+          {this.props.message} {this.state.count}
+        </div>
+        {/* <CheckBoxWithLabel labelOn="On" labelOff="off"/> */}
+      </React.Fragment>
+    );
+  }
 }
 
-ReactDOM.render(
-     <App message="hello world with props"/>,
-     document.getElementById('root')
-);
+export default App;
+
+// ReactDOM.render(
+//      <App message="hello world with props"/>,
+//      document.getElementById('root')
+// );
